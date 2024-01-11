@@ -7,7 +7,7 @@ print(df.shape)
 print(df.columns)
 
 
-df.drop(columns=['Unnamed: 0','Luminosity', 'Star_name_y', 'Distance_y', 'Mass_y', 'Radius_y'])
+df.drop(columns=['Unnamed: 0', 'Luminosity', 'Star_name_y', 'Distance_y', 'Mass_y', 'Radius_y'], inplace=True)
 columns_to_clean = ['id', 'Star_name_x', 'Distance_x', 'Mass_x', 'Radius_x']
 df[columns_to_clean] = df[columns_to_clean].fillna(0)
 
